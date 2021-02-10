@@ -1,38 +1,152 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+:root {
+  --cardRadius:8px;
+  --cardWidth:250px;
+  --cardHeight:260px;;
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  width: 1080px;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: 'Open Sans';
+}
+
+a:link {
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+}
+
+a:visited{
+  color: black;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  border-radius: var(--cardRadius);
+  width: var(--cardWidth);
+  height: var(--cardHeight);
+  float: left;
+  margin: 10px 0px 10px 15px;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.container {
+  padding: 2px 16px;
+}
+
+.title {
+  float: left;
+  width: 80%;
+  font-size: 13px;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.titleContainer {
+  width: 200px;
+}
+
+.viewDetails {
+  position:relative;
+  float: bottom;
+  width: var(--cardWidth);
+  margin-left:16px;
+  color: blue;
+}
+
+.videoBanner {
+  max-width: var(--cardWidth);
+  max-height: 100%;
+  border-radius: var(--cardRadius) var(--cardRadius) 0px 0px;
+  position: relative;
+}
+
+.videoNumber{
+  position: relative;
+  top: -100px;
+  left: calc(var(--cardWidth) - 40px);
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.transparentBg{
+  background-color: black;
+  z-index: 1;
+  width: var(--cardWidth);
+  height:100%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+.numberRelatedVideos {
+  background-color: rgba(0, 0, 0, 0.7);
+  top: 0;
+  left: 0;
+  float: right;
+  width: 100px;
+  height: 50;
+  position: relative;
+  z-index: 1;
+}
+
+.userIcon {
+  float: right;
+}
+
+.lowerContainer {
+  postion: relative;
+  width: var(--cardWidth);
+  margin-top: 50px;
+  margin-left: 8px;
+}
+.time {
+  float: left;
+  margin-right: 8px;
+  font-weight: 10px;
+  font-size: 11px;
+  font-weight: bold;
+  margin-left: 8px;
+}
+
+.views {
+  float:left;
+  font-size: 11px;
+  font-weight: bold;
+}
+
+@media only screen and (max-width : 1000px) {
+  .App-header {
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
+
+@media only screen and (max-width : 600px) {
+  .App-header {
+    width: 100%;
+  }
+
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    border-radius: var(--cardRadius);
+    width:400px;
+    height:350px;
+    float: left;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .userIcon {
+    float: right;
+  }
+
+  .title {
+    float: left;
+    width:80%;
+    font-size: 13px;
+  }
+}
+
+
